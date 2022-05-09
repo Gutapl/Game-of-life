@@ -44,6 +44,12 @@ for z in range(pokoleniya):
                 futurepole[i][j] = 1
             else:
                 futurepole[i][j] = 0
+    if futurepole == realworld:
+        break
+    elif realworld == [[0] * widthworld for _ in range(lenworld)]:
+        break
+    else:
+        to = 0
     realworld = futurepole.copy()
     vivodpole(realworld)
     realworld = futurepole.copy()
